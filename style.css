@@ -1,0 +1,258 @@
+@import url(https://fonts.google.com/specimen/Raleway);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+body {
+  background-color: #171c21;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.nav_section {
+  margin: 10px; }
+  .nav_section .fylo_logo {
+    float: left;
+    margin: 10px 7px; }
+    .nav_section .fylo_logo img {
+      width: 65%; }
+  .nav_section .navbar ul {
+    float: right; }
+    .nav_section .navbar ul li {
+      padding: 0 20px;
+      display: inline; }
+      .nav_section .navbar ul li a {
+        text-decoration: none;
+        color: #ababab;
+        font-size: 20px;
+        position: relative;
+        font-family: 'Raleway',serif;
+        font-weight: 400; }
+        .nav_section .navbar ul li a::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: white;
+          transform: scaleX(0);
+          transition: transform 0.3s ease; }
+        .nav_section .navbar ul li a:hover {
+          color: white; }
+          .nav_section .navbar ul li a:hover::before {
+            transform: scaleX(1); }
+
+@media only screen and (max-width: 345px) {
+  .nav_section {
+    margin: 10px; }
+    .nav_section .fylo_logo {
+      float: left;
+      margin: 10px 2px; }
+      .nav_section .fylo_logo img {
+        width: 50%; }
+    .nav_section ul {
+      float: right;
+      margin-right: -41%;
+      margin-top: -12%;
+      padding: 0 -7px; }
+      .nav_section ul li {
+        padding: 0 10px;
+        display: inline; }
+        .nav_section ul li a {
+          font-size: 9px; } }
+
+.header_description {
+  text-align: center;
+  margin-left: 27%; }
+  .header_description img {
+    margin: 8% 5%;
+    width: 50%; }
+  .header_description h1 {
+    padding: -2% 0;
+    margin-left: -38%;
+    font-size: 240%;
+    font-family: 'Raleway',serif;
+    font-weight: 400; }
+  .header_description p {
+    margin: 10px 0 30px -38%;
+    font-size: 140%;
+    font-family: 'Raleway',serif;
+    font-weight: 400; }
+  .header_description a {
+    margin: 15px 5px 10px -38%;
+    text-decoration: none;
+    color: white;
+    background-color: #339ecc;
+    border-radius: 20px;
+    padding: 8px 55px;
+    font-size: 140%;
+    font-family: 'Raleway',serif;
+    font-weight: 400; }
+    .header_description a:hover {
+      transform: translateY(4px);
+      background-color: #65e2d9; }
+    .header_description a:active {
+      transform: translateX(55px);
+      box-shadow: 0 0.5rem 1rem #339ecc; }
+
+@media only screen and (max-width: 345px) {
+  .header_description {
+    text-align: center;
+    margin-left: 45%; }
+    .header_description img {
+      padding-top: 5%;
+      margin-top: 11%;
+      margin-left: -17%;
+      width: 160%; }
+    .header_description p {
+      margin: 10px -10px;
+      width: 100%;
+      height: 50%;
+      font-size: 120%;
+      font-family: 'Raleway',serif;
+      font-weight: 400; } }
+
+.main {
+  background-image: url(./images/bg-curvy-desktop.svg);
+  background-size: 150% 150%;
+  height: 270vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: visible;
+  position: relative; }
+  .main .features {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 20px; }
+    .main .features .feature_line--1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 50px 30px; }
+      .main .features .feature_line--1 .access_your_files {
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Open Sans',serif;
+        font-weight: 400; }
+      .main .features .feature_line--1 .secuirity {
+        text-align: center;
+        margin-top: 10px;
+        font-family: 'Open Sans',serif;
+        font-weight: 400; }
+    .main .features .feature_line--2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 50px 30px; }
+      .main .features .feature_line--2 .real_time_collaboration {
+        text-align: center;
+        margin-top: 1px;
+        font-family: 'Open Sans',serif;
+        font-weight: 400; }
+      .main .features .feature_line--2 .store {
+        text-align: center;
+        margin-top: 12px;
+        font-family: 'Open Sans',serif;
+        font-weight: 400; }
+  .main .illustration_intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 30px;
+    justify-content: space-between;
+    margin: 4px 20px; }
+    .main .illustration_intro .img_illustration img {
+      width: 90%;
+      padding: 0 30px; }
+    .main .illustration_intro .intro {
+      padding: 40px 50px; }
+      .main .illustration_intro .intro p {
+        font-size: 20px;
+        float: left; }
+    .main .illustration_intro a {
+      color: #65e2d9;
+      font-size: 20px;
+      margin: 0; }
+      .main .illustration_intro a img {
+        display: inline-block;
+        margin: 30px 0 0 5px; }
+        .main .illustration_intro a img:hover {
+          color: white; }
+      .main .illustration_intro a:hover {
+        color: white; }
+  .main .testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat; }
+    .main .testimonials .quote_statement {
+      background-color: #202a3c;
+      margin: 35px 15px;
+      border-radius: 5px; }
+    .main .testimonials blockquote {
+      font-size: 17.5px;
+      font-family: 'Open Sans',serif;
+      font-weight: 400; }
+    .main .testimonials .profile {
+      display: flex;
+      flex-direction: row; }
+      .main .testimonials .profile .profile_image img {
+        width: 30%;
+        border-radius: 50px;
+        margin-left: 40px;
+        margin-right: -10px; }
+      .main .testimonials .profile .profile_name {
+        display: flex;
+        flex-direction: column;
+        margin-left: -45px;
+        margin-top: -13px; }
+        .main .testimonials .profile .profile_name p {
+          margin-top: -7px;
+          font-family: 'Open Sans',serif;
+          font-weight: 400; }
+        .main .testimonials .profile .profile_name h2 {
+          font-size: 15px;
+          font-family: 'Open Sans',serif;
+          font-weight: 400; }
+
+.login_section {
+  text-align: center;
+  height: 50vh;
+  margin: 7% 0 0 25%;
+  width: 50%;
+  border-radius: 20px;
+  background-color: #1c2431;
+  position: absolute;
+  overflow: hidden; }
+  .login_section h, .login_section p {
+    font-family: 'Open Sans',serif;
+    font-weight: 400;
+    margin: 13px; }
+  .login_section a {
+    text-decoration: none;
+    color: white;
+    background-color: #339ecc;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-size: 100%;
+    font-family: 'Raleway',serif;
+    font-weight: 400; }
+    .login_section a:hover {
+      transform: translateY(4px);
+      background-color: #65e2d9; }
+    .login_section a:active {
+      transform: translateX(55px);
+      box-shadow: 0 0.5rem 1rem #339ecc; }
+  .login_section input {
+    margin: 2px 20px 20px 20px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: transparent;
+    width: 80%; }
+  .login_section label {
+    display: block;
+    font-size: 70%;
+    color: brown;
+    margin-top: -20px;
+    margin-bottom: 10px; }

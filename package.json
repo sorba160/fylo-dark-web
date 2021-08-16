@@ -1,0 +1,15 @@
+{
+  "name": "fylo-dark-theme-landing-page-master",
+  "version": "1.0.0",
+  "description": "landing page of fylo ",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": " node-sass main.scss style.css",
+    "watch:sass": "nodemon -e scss -x \" npm run compile:sass\""
+  },
+  "author": "sorbajit",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

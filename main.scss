@@ -1,0 +1,348 @@
+@import url(https://fonts.google.com/specimen/Raleway);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+$intro_and_email_sign_up_background :  hsl(217, 28%, 15%);
+$main_background:hsl(210, 17%, 11%);
+$footer_background:hsl(216, 53%, 9%);
+$testimonials_background:hsl(219, 30%, 18%);
+$inside_call-to-action_gradient1:hsl(176, 68%, 64%);
+$inside_call-to-action_gradient2:hsl(198, 60%, 50%);
+$error:hsl(0, 100%, 63%);
+$Dark_White: hsl(0, 0%, 67%);
+$White: hsl(0, 0%, 100%);
+@mixin Headings_Call-to-actions_Header-Navigation {
+    font-family: 'Raleway',serif;
+    font-weight: 400;
+    // font-weight: 700;
+} 
+@mixin body {
+    font-family: 'Open Sans',serif;
+    font-weight: 400;
+    // font-weight: 700;
+}
+
+body{
+    background-color:$main_background;
+    color:$White;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+} 
+.nav_section{ 
+    margin: 10px;
+    .fylo_logo{
+        float: left;
+        
+        margin: 10px 7px;
+        img{
+            width: 65%;
+        }
+    } 
+    .navbar{
+        ul{
+            float: right; 
+            li{ 
+                a{
+                    text-decoration: none;
+                    color: $Dark_White;
+                    font-size: 20px; 
+                    position: relative;
+                    @include Headings_Call-to-actions_Header-Navigation;
+                      &::before{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: $White;
+                        transform: scaleX(0);
+                        transition: transform 0.3s ease;
+                      }
+
+                    &:hover{
+                         color: $White;
+                        &::before{
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+                
+                padding: 0 20px;
+                display: inline;
+            }
+        }
+    }
+} 
+@media only screen and (max-width: 345px) {
+    .nav_section{ 
+        margin: 10px;
+        .fylo_logo{
+            float: left;
+            
+            margin: 10px 2px;
+            img{
+                width: 50%;
+            }
+        } 
+    ul{
+       float: right;
+       margin-right: -41%;
+       margin-top: -12%;
+       padding: 0 -7px;
+       li{
+        padding: 0 10px;
+        display: inline;
+        a{
+            font-size: 9px;
+        }
+       }
+
+   } 
+}
+}
+.header_description{
+    text-align: center;
+    margin-left: 27%;
+    
+    
+    img{ 
+        
+        margin: 8% 5% ;
+        width: 50%;
+    } 
+    h1{
+        padding: -2% 0;
+        margin-left: -38% ;
+        font-size:240% ;
+        @include Headings_Call-to-actions_Header-Navigation;
+    } 
+    p{
+        margin: 10px 0 30px -38%;
+        font-size:140% ;
+        @include Headings_Call-to-actions_Header-Navigation;
+    } 
+    a{
+        margin: 15px 5px 10px -38%;
+        text-decoration: none;
+        color:$White ;
+        background-color:$inside_call-to-action_gradient2;
+        border-radius: 20px;
+        padding: 8px 55px;
+        font-size:140% ;
+        @include Headings_Call-to-actions_Header-Navigation;
+        &:hover{
+            transform: translateY(4px);
+          background-color: $inside_call-to-action_gradient1;
+        }
+        &:active{
+            transform: translateX(55px);
+            box-shadow: 0 .5rem 1rem $inside_call-to-action_gradient2;
+        }
+    }
+}  
+  @media only screen and (max-width: 345px){
+    .header_description{
+        text-align: center;
+        margin-left: 45%;
+        img{ 
+            padding-top: 5%;
+           margin-top: 11%;
+           margin-left: -17%;
+            width: 160%;
+        } 
+        p{
+            margin: 10px -10px;
+            width: 100%;
+            height: 50%;
+            font-size:120% ;
+            @include Headings_Call-to-actions_Header-Navigation;
+        } 
+    }
+}
+@mixin feature_style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 30px;
+} 
+.main{
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-size:  150% 150%;
+    // background-size: 100% 100%;
+    height: 270vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: visible;
+    // background-position: 40% 140%;
+
+    position: relative;
+.features{
+    display: flex;
+    flex-direction: column; 
+    margin: 4px 20px;
+    .feature_line--1{
+        @include  feature_style;
+        .access_your_files{
+            text-align: center;
+            margin-top: 20px;
+            @include body;
+        } 
+        .secuirity{
+            text-align: center; 
+            margin-top: 10px;
+            @include body;
+        }
+    } 
+    .feature_line--2{
+        @include  feature_style;
+        .real_time_collaboration{
+            text-align: center;
+            margin-top: 1px;
+            @include body;
+        }
+        .store{
+            text-align: center; 
+            margin-top: 12px;
+            @include body;
+        }
+    }
+   
+}  
+@mixin illustration_intro_style {
+    @include feature_style;
+    justify-content: space-between;
+    
+
+}
+.illustration_intro{ 
+    @include illustration_intro_style;
+    margin: 4px 20px;
+    .img_illustration{ 
+        img{
+        width: 90%; 
+        padding: 0 30px;
+        }
+    }  
+    .intro{
+        padding: 40px 50px; 
+        p{
+            font-size: 20px;
+            float: left;
+        }
+    } 
+    a{
+      color: $inside_call-to-action_gradient1;
+      font-size: 20px;
+      margin: 0;
+      img{
+          display: inline-block;
+          margin: 30px 0 0 5px;
+          &:hover{
+              color: $White;
+          }
+    } 
+    &:hover{
+        color:$White ;
+    }
+} 
+} 
+
+.testimonials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat;
+    
+    .quote_statement{
+        background-color: $testimonials_background;
+        margin: 35px 15px;
+        border-radius: 5px ;
+       }
+       blockquote{
+           font-size: 17.5px;
+           @include body;
+       }
+
+    .profile{
+        display:flex; 
+        flex-direction: row; 
+        
+        .profile_image{
+            img{
+                width: 30%;
+                border-radius: 50px;
+                margin-left: 40px;
+                margin-right: -10px;
+            }
+        }
+        .profile_name{
+            display: flex;
+            flex-direction: column;
+            margin-left: -45px;
+            margin-top: -13px;
+            p{
+                margin-top: -7px;
+                @include body;
+            } 
+            h2{
+                font-size: 15px;
+                @include body;
+            }
+
+        }
+       
+       
+
+    }
+}
+
+    
+}
+.login_section{
+    text-align: center;
+    // margin: 20px 50px;
+    height: 50vh;
+    
+    margin: 7% 0 0 25%;
+    width: 50%;
+    border-radius: 20px; 
+    background-color:$intro_and_email_sign_up_background ;
+    position: absolute;
+    overflow: hidden;
+    h,p{ @include body;margin: 13px;}
+     a{ 
+        // margin-top: 1000%;
+        text-decoration: none;
+        color:$White ;
+        background-color:$inside_call-to-action_gradient2;
+        border-radius: 20px;
+        padding: 7px 20px;
+        font-size:100% ;
+        @include Headings_Call-to-actions_Header-Navigation;
+        &:hover{
+            transform: translateY(4px);
+          background-color: $inside_call-to-action_gradient1;
+        }
+        &:active{
+            transform: translateX(55px);
+            box-shadow: 0 .5rem 1rem $inside_call-to-action_gradient2;
+        }
+    }
+    input{
+        margin: 2px 20px 20px 20px;
+        padding: 10px 40px;
+        border-radius: 20px;
+        border: transparent;
+        width: 80%;
+    }
+    label{
+        display: block;
+        font-size: 70%;
+        color: brown;
+        margin-top: -20px;
+        margin-bottom:10px ;
+    }
+}
